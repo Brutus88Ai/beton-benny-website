@@ -1,6 +1,6 @@
 import React from "react";
 import { HardHat, LogIn, LogOut, Menu, X, Download } from "lucide-react";
-import { useAppContext } from "../providers/AppContext";
+import { useAppContext } from "./providers/AppContext";
 import { cn } from "@/lib/utils";
 
 interface NavbarProps {
