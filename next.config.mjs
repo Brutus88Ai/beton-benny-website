@@ -11,7 +11,9 @@ const nextConfig = {
                 hostname: "www.transparenttextures.com",
             },
         ],
+        ],
     },
+transpilePackages: ["undici", "firebase", "@firebase/auth"],
 };
 
 export default nextConfig;
