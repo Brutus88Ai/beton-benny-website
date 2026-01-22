@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { MessageSquare, Send } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
     collection,
     addDoc,
@@ -13,6 +14,7 @@ import {
 import { db } from "@/lib/firebase";
 import { useAppContext } from "../providers/AppContext";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/Button";
 
 const APP_ID = "beton-benny"; // Fixed App ID for preview
 
@@ -91,19 +93,25 @@ export const Guestbook = () => {
                         <MessageSquare className="text-neonOrange" /> Die Baustellen-Wand
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 max-h-[400px] overflow-y-auto p-2">
-                        {messages.map((msg, idx) => (
-                            <div
-                                key={msg.id || idx}
-                                className="bg-white p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] transform rotate-1 hover:-rotate-1 transition-transform border border-gray-300"
-                            >
-                                <p className="font-marker text-xl mb-2 text-gray-800 leading-tight">
-                                    "{msg.text}"
-                                </p>
-                                <div className="text-xs font-bold text-neonOrange uppercase tracking-wider text-right">
-                                    - {msg.author}
-                                </div>
-                            </div>
-                        ))}
+                        <React.Fragment>
+                            {/* We use React.Fragment because AnimatePresence needs direct children usually, but for specific list animations better to just animate the items */}
+                            {messages.map((msg, idx) => (
+                                <motion.div
+                                    key={msg.id || idx}
+                                    initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                                    animate={{ opacity: 1, scale: 1, rotate: (idx % 2 === 0 ? 1 : -1) }}
+                                    transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                                    className="bg-white p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] border border-gray-300 hover:z-10 hover:scale-105 transition-all"
+                                >
+                                    <p className="font-marker text-xl mb-2 text-gray-800 leading-tight">
+                                        "{msg.text}"
+                                    </p>
+                                    <div className="text-xs font-bold text-neonOrange uppercase tracking-wider text-right">
+                                        - {msg.author}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </React.Fragment>
                         {messages.length === 0 && (
                             <div className="text-center w-full col-span-full opacity-50 font-marker">
                                 Noch nichts los hier...

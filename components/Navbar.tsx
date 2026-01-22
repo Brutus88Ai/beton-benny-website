@@ -26,9 +26,8 @@ export const Navbar = ({ onOpenLegal }: NavbarProps) => {
 
     const navItems = [
         { id: "musik", label: "Musik" },
-        { id: "termine", label: "Schichtplan" },
+        { id: "gallery", label: "Galerie" },
         { id: "shop", label: "Material" },
-        { id: "kontakt", label: "Bauantrag" },
     ];
 
     return (

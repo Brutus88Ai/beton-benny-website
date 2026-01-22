@@ -25,11 +25,11 @@ export const HeroSection = () => {
             <div className="absolute inset-0 bg-concreteDark">
                 <div
                     className={cn(
-                        "absolute inset-0 opacity-40 bg-cover bg-center transition-all duration-700",
+                        "absolute inset-0 opacity-60 bg-cover bg-center transition-all duration-700",
                         isNightShift ? "mix-blend-overlay" : "mix-blend-normal"
                     )}
                     style={{
-                        backgroundImage: "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')",
+                        backgroundImage: "url('/gallery/hero-main.png')",
                     }}
                 ></div>
                 {isNightShift && (
@@ -47,23 +47,35 @@ export const HeroSection = () => {
                     transition={{ duration: 0.8, ease: "backOut" }}
                     className="font-stencil text-5xl md:text-8xl lg:text-9xl text-white drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] leading-none mb-8"
                 >
-                    HIER WIRD
+                    BETON AUF
                     <br />
-                    <span className="text-neonOrange">GESPUCKT!</span>
+                    <span className="text-neonOrange">MALLORCA!</span>
                 </motion.h1>
 
-                <Countdown />
+                <p className="text-white/90 text-xl md:text-2xl font-bold max-w-2xl mx-auto mb-8">
+                    Der einzige Bauleiter, der seine Hits mit KI zimmert! 🏗️
+                </p>
 
-                <div className="flex justify-center mt-6">
+                <div className="flex justify-center gap-4 mt-6">
                     <Button
                         variant="danger"
-                        className="text-xl px-10 py-8"
-                        onClick={handleScrollToDates}
+                        className="text-xl px-10 py-6"
+                        onClick={() => {
+                            const element = document.getElementById('musik');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}
                     >
-                        <div className="flex flex-col items-center leading-tight">
-                            <span>JETZT ABRISS</span>
-                            <span className="text-xs opacity-80">BUCHEN</span>
-                        </div>
+                        SONGS HÖREN
+                    </Button>
+                    <Button
+                        variant="secondary"
+                        className="text-xl px-10 py-6"
+                        onClick={() => {
+                            const element = document.getElementById('shop');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        MERCH SHOPPEN
                     </Button>
                 </div>
             </div>
