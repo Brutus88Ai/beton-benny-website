@@ -27,10 +27,12 @@ export const ImageGallery = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <SectionTitle 
-          title="PARTY-GALERIE" 
-          subtitle="Die wildesten Momente in Bildern! 📸"
-        />
+        <SectionTitle>
+          PARTY-GALERIE
+        </SectionTitle>
+        <p className="text-center text-lg mb-8 text-gray-600 dark:text-gray-400">
+          Die wildesten Momente in Bildern! 📸
+        </p>
 
         {/* CATEGORY FILTER */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">

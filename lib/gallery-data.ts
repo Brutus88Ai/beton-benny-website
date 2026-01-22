@@ -45,7 +45,27 @@ export const galleryImages: GalleryImage[] = [
     caption: 'Strohhut-Gang versammelt sich! 🤠',
     alt: 'Menschenmenge mit Strohhüten'
   },
-
+  {
+    id: 'party-06',
+    src: '/gallery/party-polonaise.png',
+    category: 'party',
+    caption: 'Polonaise-Leader in Action! 🐍',
+    alt: 'Polonaise anführen'
+  },
+  {
+    id: 'party-07',
+    src: '/gallery/party-shirt.jpeg',
+    category: 'party',
+    caption: 'Shirt-Waving beim Auftritt! 👕',
+    alt: 'T-Shirt schwenken'
+  },
+  {
+    id: 'party-08',
+    src: '/gallery/party-matching.png',
+    category: 'party',
+    caption: 'Matching Outfits mit der Crew! 👔',
+    alt: 'Gruppenfoto mit gleichen Shirts'
+  },
   // BALLERMANN VIBES
   {
     id: 'ballermann-01',
@@ -74,6 +94,34 @@ export const galleryImages: GalleryImage[] = [
     category: 'ballermann',
     caption: 'Balkon-Serenade für die Fans! 🎤',
     alt: 'Balkon-Auftritt'
+  },
+  {
+    id: 'ballermann-05',
+    src: '/gallery/ballermann-cheers.png',
+    category: 'ballermann',
+    caption: 'Cheers zum Meer! 🌊',
+    alt: 'Anstoßen am Strand'
+  },
+  {
+    id: 'ballermann-06',
+    src: '/gallery/ballermann-bratwurst.jpeg',
+    category: 'ballermann',
+    caption: 'Bratwurst-Stand - deutsche Tradition! 🌭',
+    alt: 'An der Bratwurst-Bude'
+  },
+  {
+    id: 'ballermann-07',
+    src: '/gallery/ballermann-vendor.jpeg',
+    category: 'ballermann',
+    caption: 'Vendor Interaction - immer freundlich! 🤝',
+    alt: 'Gespräch mit Verkäufer'
+  },
+  {
+    id: 'ballermann-08',
+    src: '/gallery/ballermann-kiosk.jpeg',
+    category: 'ballermann',
+    caption: 'Kiosk-Stop für Nachschub! 🏪',
+    alt: 'Am Kiosk'
   },
 
   // FUNNY MOMENTS
@@ -105,84 +153,6 @@ export const galleryImages: GalleryImage[] = [
     caption: 'Frühschoppen um 9 Uhr - Tradition! ☀️',
     alt: 'Morgen-Bier trinken'
   },
-
-  // ACTION SHOTS
-  {
-    id: 'action-01',
-    src: '/gallery/action-neon.jpeg',
-    category: 'action',
-    caption: 'Neon-Nacht Performance 🌈',
-    alt: 'Neon-beleuchtete Performance'
-  },
-  {
-    id: 'action-02',
-    src: '/gallery/action-flag.jpeg',
-    category: 'action',
-    caption: 'Deutschland-Fahne als Cape! 🇩🇪',
-    alt: 'Mit deutscher Flagge als Umhang'
-  }
-];
-
-export const categoryLabels: Record<GalleryCategory, string> = {
-  party: 'Party Chaos',
-  ballermann: 'Ballermann Vibes',
-  funny: 'Funny Moments',
-  action: 'Action Shots'
-};
-  // MEHR PARTY SCENES
-  {
-    id: 'party-06',
-    src: '/gallery/party-polonaise.png',
-    category: 'party',
-    caption: 'Polonaise-Leader in Action! 🐍',
-    alt: 'Polonaise anführen'
-  },
-  {
-    id: 'party-07',
-    src: '/gallery/party-shirt.jpeg',
-    category: 'party',
-    caption: 'Shirt-Waving beim Auftritt! 👕',
-    alt: 'T-Shirt schwenken'
-  },
-  {
-    id: 'party-08',
-    src: '/gallery/party-matching.png',
-    category: 'party',
-    caption: 'Matching Outfits mit der Crew! 👔',
-    alt: 'Gruppenfoto mit gleichen Shirts'
-  },
-
-  // MEHR BALLERMANN
-  {
-    id: 'ballermann-05',
-    src: '/gallery/ballermann-cheers.png',
-    category: 'ballermann',
-    caption: 'Cheers zum Meer! 🌊',
-    alt: 'Anstoßen am Strand'
-  },
-  {
-    id: 'ballermann-06',
-    src: '/gallery/ballermann-bratwurst.jpeg',
-    category: 'ballermann',
-    caption: 'Bratwurst-Stand - deutsche Tradition! 🌭',
-    alt: 'An der Bratwurst-Bude'
-  },
-  {
-    id: 'ballermann-07',
-    src: '/gallery/ballermann-vendor.jpeg',
-    category: 'ballermann',
-    caption: 'Vendor Interaction - immer freundlich! 🤝',
-    alt: 'Gespräch mit Verkäufer'
-  },
-  {
-    id: 'ballermann-08',
-    src: '/gallery/ballermann-kiosk.jpeg',
-    category: 'ballermann',
-    caption: 'Kiosk-Stop für Nachschub! 🏪',
-    alt: 'Am Kiosk'
-  },
-
-  // MEHR FUNNY MOMENTS
   {
     id: 'funny-05',
     src: '/gallery/funny-sangria.jpeg',
@@ -226,7 +196,21 @@ export const categoryLabels: Record<GalleryCategory, string> = {
     alt: 'Morgendlicher Spaziergang'
   },
 
-  // MEHR ACTION
+  // ACTION SHOTS
+  {
+    id: 'action-01',
+    src: '/gallery/action-neon.jpeg',
+    category: 'action',
+    caption: 'Neon-Nacht Performance 🌈',
+    alt: 'Neon-beleuchtete Performance'
+  },
+  {
+    id: 'action-02',
+    src: '/gallery/action-flag.jpeg',
+    category: 'action',
+    caption: 'Deutschland-Fahne als Cape! 🇩🇪',
+    alt: 'Mit deutscher Flagge als Umhang'
+  },
   {
     id: 'action-03',
     src: '/gallery/action-tattoo.png',
